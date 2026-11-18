@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="data:," />
+<title>Partnership Proposal — Academia del Profe Omar × One Stop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#12294d;
+    --navy-2:#1b3a66;
+    --gold:#c9a227;
+    --gold-soft:#f3e9c8;
+    --gold-pale:#faf5e3;
+    --ink:#1e2a3a;
+    --muted:#5a6a7f;
+    --line:#e3e0d3;
+    --line-2:#d8d2bd;
+    --bg:#fdfcf8;
+    --card:#ffffff;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:"Playfair Display", Georgia, serif; color:var(--navy); line-height:1.15; margin:0}
+  p{margin:0}
+  a{color:var(--navy)}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px}
+
+  /* ---------- Header ---------- */
+  header{
+    background:
+      radial-gradient(900px 340px at 85% -60px, rgba(201,162,39,.16), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #fbf8ee 100%);
+    border-bottom:1px solid var(--line);
+    padding:34px 0 56px;
+  }
+  .topbar{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+  .seal{
+    display:inline-flex; align-items:center; gap:12px;
+    font-weight:700; letter-spacing:.16em; font-size:12.5px; color:var(--navy);
+    text-transform:uppercase;
+  }
+  .seal-mark{
+    width:44px; height:44px; border-radius:50%;
+    border:2px solid var(--gold);
+    display:grid; place-items:center;
+    font-family:"Playfair Display", Georgia, serif; font-weight:700; font-size:19px; color:var(--navy);
+    background:#fff;
+    flex:0 0 auto;
+  }
+  .seal small{display:block; letter-spacing:.1em; font-weight:600; color:var(--muted); font-size:10.5px; margin-top:1px}
+  .tag{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--gold); color:var(--navy); background:var(--gold-pale);
+    font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:8px 14px; border-radius:999px; min-height:36px;
+  }
+  .tag::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--gold)}
+  .hero{max-width:820px; margin-top:44px}
+  .hero h1{font-size:clamp(2.1rem, 5.2vw, 3.4rem); font-weight:600; letter-spacing:-.01em}
+  .hero h1 em{font-style:italic; color:var(--navy-2); box-shadow:inset 0 -0.32em 0 var(--gold-soft)}
+  .hero .sub{margin-top:20px; font-size:clamp(1.05rem, 2vw, 1.22rem); color:#3c4c61; max-width:680px}
+  .hero-rule{width:64px; height:3px; background:var(--gold); border-radius:2px; margin-top:28px}
+  .hero-meta{display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:22px; color:var(--muted); font-size:15px}
+  .hero-meta strong{color:var(--navy); font-weight:700}
+
+  /* ---------- Sections ---------- */
+  section{padding:58px 0 8px}
+  .sec-head{max-width:720px; margin-bottom:28px}
+  .sec-head h2{font-size:clamp(1.65rem, 3.4vw, 2.15rem); font-weight:600}
+  .sec-head p{margin-top:12px; color:#3c4c61; font-size:1.05rem}
+  .gold-rule{width:44px; height:3px; background:var(--gold); border-radius:2px; margin-bottom:16px}
+
+  /* Stats */
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:26px 0 30px}
+  .stat{
+    background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold);
+    border-radius:var(--radius); padding:20px 18px; text-align:left;
+  }
+  .stat .num{font-family:"Playfair Display", Georgia, serif; font-size:2rem; font-weight:700; color:var(--navy); line-height:1}
+  .stat .lbl{margin-top:7px; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+
+  /* Modules */
+  .modules{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+  .module{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 18px 16px;
+  }
+  .module .code{
+    font-family:"Playfair Display", Georgia, serif; font-weight:700; font-size:1.28rem; color:var(--navy);
+  }
+  .module .name{margin-top:4px; font-size:15px; color:var(--muted); line-height:1.4}
+  .module .bar{width:26px; height:3px; background:var(--gold); border-radius:2px; margin-bottom:12px}
+
+  /* Build together */
+  .cards3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 24px;
+  }
+  .card .n{
+    font-family:"Playfair Display", Georgia, serif; font-size:.95rem; font-weight:700; color:var(--gold);
+    letter-spacing:.05em;
+  }
+  .card h3{font-size:1.32rem; font-weight:600; margin-top:8px}
+  .card p{margin-top:10px; color:#3c4c61; font-size:16px}
+
+  /* Chart */
+  .chart-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px 28px 22px;
+  }
+  .chart{display:flex; flex-direction:column; gap:18px; margin-top:6px}
+  .row{display:grid; grid-template-columns:118px 1fr 92px; align-items:center; gap:14px}
+  .row .rlbl{font-weight:700; color:var(--navy); font-size:15.5px; text-align:right}
+  .row .rlbl span{display:block; font-weight:600; color:var(--muted); font-size:12.5px; letter-spacing:.04em; text-transform:uppercase}
+  .track{background:#f1eee0; border-radius:8px; height:38px; overflow:hidden}
+  .fill{
+    height:100%; border-radius:8px;
+    background:linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 78%, #2c5288 100%);
+    position:relative;
+  }
+  .fill.goldfill{background:linear-gradient(90deg, #a9851c 0%, var(--gold) 100%)}
+  .row .rval{font-family:"Playfair Display", Georgia, serif; font-weight:700; font-size:1.12rem; color:var(--navy)}
+  .chart-note{
+    margin-top:22px; background:var(--gold-pale); border:1px solid var(--line-2); border-radius:10px;
+    padding:16px 18px; font-size:15.5px; color:#3c4c61;
+  }
+  .chart-note strong{color:var(--navy)}
+
+  /* Table */
+  .table-wrap{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  table{width:100%; border-collapse:collapse; font-size:16px}
+  thead th{
+    background:var(--navy); color:#fff; text-align:left; font-weight:700; font-size:13px;
+    letter-spacing:.08em; text-transform:uppercase; padding:15px 20px;
+  }
+  tbody td{padding:20px; vertical-align:top; border-top:1px solid var(--line); color:#3c4c61}
+  tbody tr:first-child td{border-top:none}
+  td.model{width:26%}
+  td.model .mname{font-family:"Playfair Display", Georgia, serif; font-size:1.18rem; font-weight:700; color:var(--navy); line-height:1.25}
+  td.example{width:34%}
+  .split{display:flex; flex-direction:column; gap:6px}
+  .split .line{display:flex; justify-content:space-between; gap:12px; border-bottom:1px dashed var(--line); padding-bottom:6px}
+  .split .line:last-child{border-bottom:none; padding-bottom:0}
+  .split .who{color:var(--muted); font-size:14.5px}
+  .split .amt{font-weight:700; color:var(--navy); white-space:nowrap}
+  .note-box{
+    margin-top:18px; border:1.5px solid var(--gold); background:var(--gold-pale);
+    border-radius:var(--radius); padding:20px 22px; display:flex; gap:14px;
+  }
+  .note-box .mark{font-family:"Playfair Display", Georgia, serif; font-size:1.6rem; color:var(--gold); line-height:1; flex:0 0 auto}
+  .note-box p{font-size:16.5px; color:#33445c}
+  .note-box strong{color:var(--navy)}
+
+  /* Questions */
+  .questions{display:flex; flex-direction:column; gap:0; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  .q{display:flex; gap:18px; padding:20px 24px; border-top:1px solid var(--line); align-items:flex-start}
+  .q:first-child{border-top:none}
+  .q .qn{
+    flex:0 0 auto; width:38px; height:38px; border-radius:50%;
+    border:2px solid var(--gold); color:var(--navy);
+    font-family:"Playfair Display", Georgia, serif; font-weight:700; font-size:1.05rem;
+    display:grid; place-items:center; background:#fff; margin-top:1px;
+  }
+  .q p{font-size:17px; color:var(--ink); padding-top:6px}
+  .closing{margin-top:22px; font-size:1.08rem; color:#3c4c61; max-width:760px}
+  .closing strong{color:var(--navy)}
+  .cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; min-height:52px;
+    padding:13px 24px; border-radius:10px; font-weight:700; font-size:16.5px; text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-wa{background:#1faa55; color:#fff; box-shadow:0 6px 18px rgba(31,170,85,.25)}
+  .btn-wa:hover{background:#1b964b}
+  .btn-mail{background:var(--navy); color:#fff; box-shadow:0 6px 18px rgba(18,41,77,.22)}
+  .btn-mail:hover{background:var(--navy-2)}
+  .btn svg{flex:0 0 auto}
+
+  footer{
+    margin-top:64px; border-top:1px solid var(--line); background:#fff;
+    padding:28px 0 34px; color:var(--muted); font-size:14.5px;
+  }
+  footer .frow{display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; justify-content:space-between}
+  footer strong{color:var(--navy)}
+
+  @media (max-width:860px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .modules{grid-template-columns:repeat(2,1fr)}
+    .cards3{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16.5px}
+    section{padding:44px 0 4px}
+    header{padding:24px 0 42px}
+    .hero{margin-top:32px}
+    .row{grid-template-columns:86px 1fr 74px; gap:10px}
+    .row .rlbl{font-size:14px}
+    .row .rval{font-size:.98rem}
+    .track{height:32px}
+    .chart-card{padding:20px 16px 16px}
+    /* Table becomes stacked cards */
+    table, thead, tbody, tr, td{display:block; width:100%}
+    thead{display:none}
+    tbody tr{padding:18px 20px; border-top:1px solid var(--line)}
+    tbody tr:first-child{border-top:none}
+    tbody td{padding:0; border-top:none}
+    td.model{width:100%; margin-bottom:8px}
+    td.example{width:100%; margin-top:12px}
+    td.example::before, td.how::before{
+      content:attr(data-lbl); display:block; font-size:12px; font-weight:700; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--muted); margin-bottom:5px;
+    }
+    .q{padding:18px 18px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="seal">
+        <span class="seal-mark" aria-hidden="true">A</span>
+        <span>Academia del Profe Omar<small>Spanish-language professional courses</small></span>
+      </div>
+      <span class="tag">Prepared for One Stop</span>
+    </div>
+
+    <div class="hero">
+      <h1>A partnership that puts a complete <em>immigration forms course</em> under your brand</h1>
+      <p class="sub">Our complete prerecorded course — 80 lessons in Spanish — ready to license or acquire, fully rebranded for your company, with new courses produced for you as you grow.</p>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <div class="hero-meta">
+        <span><strong>For:</strong> One Stop</span>
+        <span><strong>From:</strong> Academia del Profe Omar</span>
+        <span><strong>Date:</strong> November 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- The course -->
+  <section aria-labelledby="course-h">
+    <div class="sec-head">
+      <div class="gold-rule" aria-hidden="true"></div>
+      <h2 id="course-h">The course</h2>
+      <p>A complete, ready-to-sell program teaching preparation of the main USCIS forms, field by field, in Spanish — professionally narrated, with student materials included. It retails at <strong>$499 per student</strong>.</p>
+    </div>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><div class="num">80</div><div class="lbl">Lessons</div></div>
+      <div class="stat" role="listitem"><div class="num">8</div><div class="lbl">Modules</div></div>
+      <div class="stat" role="listitem"><div class="num">$499</div><div class="lbl">Retail price</div></div>
+      <div class="stat" role="listitem"><div class="num">100%</div><div class="lbl">In Spanish</div></div>
+    </div>
+
+    <div class="modules">
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">I-130</div><div class="name">Family petitions</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">I-485</div><div class="name">Adjustment of status</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">I-765</div><div class="name">Work permits</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">I-864</div><div class="name">Affidavit of support</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">Asylum</div><div class="name">I-589 preparation</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">Citizenship</div><div class="name">N-400 naturalization</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">Visas &amp; Certification</div><div class="name">Consular processes</div></div>
+      <div class="module"><div class="bar" aria-hidden="true"></div><div class="code">Waivers</div><div class="name">Pardons and waivers</div></div>
+    </div>
+  </section>
+
+  <!-- What we can build together -->
+  <section aria-labelledby="build-h">
+    <div class="sec-head">
+      <div class="gold-rule" aria-hidden="true"></div>
+      <h2 id="build-h">What we can build together</h2>
+    </div>
+    <div class="cards3">
+      <article class="card">
+        <div class="n">01</div>
+        <h3>License or full acquisition</h3>
+        <p>License the course for your platform under your brand — per student, annually, or as a full buyout with all rights transferred to you.</p>
+      </article>
+      <article class="card">
+        <div class="n">02</div>
+        <h3>Rebuilt with your logo</h3>
+        <p>We redo the entire course with your brand: new intros, covers and student materials, produced by our team.</p>
+      </article>
+      <article class="card">
+        <div class="n">03</div>
+        <h3>New courses, produced for you</h3>
+        <p>We produce new Spanish courses for your team and your clients — an ongoing partnership, not a one-time sale.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- The opportunity, in numbers -->
+  <section aria-labelledby="numbers-h">
+    <div class="sec-head">
+      <div class="gold-rule" aria-hidden="true"></div>
+      <h2 id="numbers-h">The opportunity, in numbers</h2>
+      <p>Projected gross course revenue per year, at the current retail price of $499 per student:</p>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart" role="img" aria-label="Bar chart of projected gross course revenue per year at 499 dollars per student: 10 students, 4,990 dollars; 25 students, 12,475 dollars; 50 students, 24,950 dollars; 100 students, 49,900 dollars.">
+        <div class="row">
+          <div class="rlbl">10<span>students / yr</span></div>
+          <div class="track"><div class="fill" style="width:10%"></div></div>
+          <div class="rval">$4,990</div>
+        </div>
+        <div class="row">
+          <div class="rlbl">25<span>students / yr</span></div>
+          <div class="track"><div class="fill" style="width:25%"></div></div>
+          <div class="rval">$12,475</div>
+        </div>
+        <div class="row">
+          <div class="rlbl">50<span>students / yr</span></div>
+          <div class="track"><div class="fill" style="width:50%"></div></div>
+          <div class="rval">$24,950</div>
+        </div>
+        <div class="row">
+          <div class="rlbl">100<span>students / yr</span></div>
+          <div class="track"><div class="fill goldfill" style="width:100%"></div></div>
+          <div class="rval">$49,900</div>
+        </div>
+      </div>
+      <div class="chart-note">
+        <strong>Your price, your margin:</strong> under a license, you set your own price. At $799 per student, the same volumes produce roughly <strong>60% more</strong> revenue.
+      </div>
+    </div>
+  </section>
+
+  <!-- How a partnership can look -->
+  <section aria-labelledby="models-h">
+    <div class="sec-head">
+      <div class="gold-rule" aria-hidden="true"></div>
+      <h2 id="models-h">How a partnership can look</h2>
+      <p>Three structures — pick the one that fits how you work, or mix them. Final terms are set together, from your real numbers.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Structure</th><th scope="col">How it works</th><th scope="col">Example</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model"><span class="mname">Per-student partnership</span></td>
+            <td class="how" data-lbl="How it works">You pay a share of each sale, only when you sell. No sale, no cost — zero risk to start.</td>
+            <td class="example" data-lbl="Example — 40% of $499, at 50 students / year">
+              <div class="split">
+                <div class="line"><span class="who">To Academia</span><span class="amt">$9,980 / yr</span></div>
+                <div class="line"><span class="who">To One Stop</span><span class="amt">$14,970 / yr</span></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="model"><span class="mname">Annual license</span></td>
+            <td class="how" data-lbl="How it works">One flat yearly fee. Unlimited students for the year, with course updates included.</td>
+            <td class="example" data-lbl="Example">Predictable cost, however many students you enroll.</td>
+          </tr>
+          <tr>
+            <td class="model"><span class="mname">Full buyout</span></td>
+            <td class="how" data-lbl="How it works">All rights transfer to you. The rebrand is included, and there are no royalties — ever.</td>
+            <td class="example" data-lbl="Example">About one year of sales at 50 students / year volume — then 100% yours, forever.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      <span class="mark" aria-hidden="true">§</span>
+      <p><strong>These are projections to start the conversation, not fixed prices.</strong> Everything is negotiable — the right deal is built on your real numbers.</p>
+    </div>
+  </section>
+
+  <!-- Your numbers -->
+  <section aria-labelledby="your-h">
+    <div class="sec-head">
+      <div class="gold-rule" aria-hidden="true"></div>
+      <h2 id="your-h">Your numbers make the deal fair</h2>
+      <p>So we can shape a proposal as close as possible to your reality, tell us:</p>
+    </div>
+
+    <div class="questions">
+      <div class="q"><span class="qn" aria-hidden="true">1</span><p>How many students do you expect per year?</p></div>
+      <div class="q"><span class="qn" aria-hidden="true">2</span><p>What price do you plan to charge them?</p></div>
+      <div class="q"><span class="qn" aria-hidden="true">3</span><p>Which structure fits you best — partnership per student, annual license, or full acquisition?</p></div>
+      <div class="q"><span class="qn" aria-hidden="true">4</span><p>What offer or budget do you have in mind?</p></div>
+      <div class="q"><span class="qn" aria-hidden="true">5</span><p>When would you like to launch?</p></div>
+    </div>
+
+    <p class="closing">Share those numbers and <strong>we will build a fair proposal around them</strong> — and negotiate openly until it works for both sides.</p>
+
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/12406590154" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.83 9.83 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.72 2.37a8.03 8.03 0 0 1 2.36 5.74c0 4.47-3.64 8.11-8.12 8.11-1.55 0-3.07-.44-4.38-1.27l-.31-.19-3.26.86.87-3.18-.2-.32a8.06 8.06 0 0 1-1.23-4.3c0-4.47 3.64-8.11 8.11-8.11m-3.4 3.53c-.16 0-.42.06-.64.34-.21.29-.81.79-.81 1.93s.83 2.25.95 2.41c.11.16 1.64 2.5 3.97 3.51.55.24 1 .38 1.34.49.56.18 1.07.15 1.47.09.45-.07 1.37-.56 1.56-1.1.19-.54.19-1 .14-1.1-.06-.1-.21-.16-.44-.27-.23-.12-.96-.47-1.11-.53-.15-.06-.25-.09-.36.09-.11.18-.43.53-.53.63-.1.11-.2.12-.38.04-.18-.07-.76-.28-1.45-.9-.54-.48-.9-1.07-.99-1.25-.1-.18-.01-.28.07-.37.07-.07.16-.18.24-.27.08-.09.1-.16.16-.26.06-.1.02-.19-.03-.27-.04-.08-.36-.87-.49-1.19-.13-.31-.26-.27-.35-.27z"/></svg>
+        Message us on WhatsApp
+      </a>
+      <a class="btn btn-mail" href="mailto:swingbravo@gmail.com?subject=Partnership%20proposal%20%E2%80%94%20One%20Stop%20%C3%97%20Academia%20del%20Profe%20Omar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        swingbravo@gmail.com
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <span><strong>Academia del Profe Omar</strong> · Omar Cruz Padilla</span>
+    <span>Partnership proposal prepared for One Stop — November 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
